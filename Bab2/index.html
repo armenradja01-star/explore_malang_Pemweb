@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore Malang - Beranda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <header class="navbar">
+      <a href="#" class="logo">
+        <svg width="34" height="24" viewBox="0 0 34 24" fill="none" aria-hidden="true">
+          <path d="M0 24 L13 5 L19 13 L24 7 L34 24 Z" fill="#1e3a8a"/>
+          <path d="M13 5 L16 9.5 L13 8 L10.5 9.5 Z" fill="#fff" opacity=".9"/>
+        </svg>
+        <span>Explore <b>Malang</b></span>
+      </a>
+      <button class="btn-location" type="button">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        Lokasi Saya
+      </button>
+    </header>
+
+    <main>
+      <!-- Hero -->
+     <section class="hero">
+             <img class="hero-img"
+                    src="../Bab2/images/dashboard awal.jpeg"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600'"
+                     alt="" fetchpriority="high">
+        <h1>Explore Malang</h1>
+        <p>Jelajahi wisata, kuliner, dan budaya kota Malang</p>
+        <form class="search" role="search" onsubmit="return false">
+          <input type="search" placeholder="Cari tempat wisata, kuliner, atau budaya..." aria-label="Cari tempat">
+          <button type="submit" aria-label="Cari">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <!-- Kategori -->
+      <section class="section">
+        <h2>Kategori</h2>
+        <ul class="categories">
+          <li>
+            <a href="#" class="cat cat-pantai">
+              <span class="cat-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                  <path d="M3 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/>
+                </svg>
+              </span>
+              <span class="cat-label">Pantai</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cat cat-gunung">
+              <span class="cat-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 20L10 6l4 7 2-3 5 10z"/><path d="M8 13l2 2 2-2"/>
+                </svg>
+              </span>
+              <span class="cat-label">Gunung</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cat cat-alam">
+              <span class="cat-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 4C9 4 4 9 4 15c0 2 1 4 3 5 6 0 13-4 13-16z"/><path d="M4 20c3-6 7-9 12-11"/>
+                </svg>
+              </span>
+              <span class="cat-label">Alam</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cat cat-coban">
+              <span class="cat-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M3 5h18"/><path d="M5 5v14M9 5v14M15 5v14M19 5v14"/><path d="M3 19h18"/>
+                </svg>
+              </span>
+              <span class="cat-label">Coban</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cat cat-cafe">
+              <span class="cat-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 10h12v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M17 12h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v3M11 3v3M14 3v3"/>
+                </svg>
+              </span>
+              <span class="cat-label">Cafe</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="cat cat-belanja">
+              <span class="cat-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+                </svg>
+              </span>
+              <span class="cat-label">Belanja</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Rekomendasi -->
+      <section class="section">
+        <div class="section-head">
+          <h2>Rekomendasi Terpopuler</h2>
+          <a href="#" class="see-all">
+            Lihat Semua
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="cards">
+          <!-- Letakkan foto di folder images/ sesuai nama file di bawah -->
+          <article class="card">
+            <a href="#">
+              <div class="card-img img-balekambang">
+                <img src="../Bab2/images/pantai balekambang.jpeg" alt="Pantai Balekambang" loading="lazy" onerror="this.remove()">
+                <span class="distance"><svg width="10" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>14.2 km</span>
+              </div>
+              <div class="card-body">
+                <h3>Pantai Balekambang</h3>
+                <p>Kabupaten Malang</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#">
+              <div class="card-img img-bromo">
+                <img src="../Bab2/images/bromo.jpeg" alt="Gunung Bromo" loading="lazy" onerror="this.remove()">
+                <span class="distance"><svg width="10" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>35.2 km</span>
+              </div>
+              <div class="card-body">
+                <h3>Gunung Bromo</h3>
+                <p>Kabupaten Malang</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#">
+              <div class="card-img img-rondo">
+                <img src="../Bab2/images/coban rondo.jpeg" alt="Coban Rondo" loading="lazy" onerror="this.remove()">
+                <span class="distance"><svg width="10" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>18.7 km</span>
+              </div>
+              <div class="card-body">
+                <h3>Coban Rondo</h3>
+                <p>Pujon, Malang</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#">
+              <div class="card-img img-alun">
+                <img src="../Bab2/images/alunalun.jpeg" alt="Alun-Alun Kota Malang" loading="lazy" onerror="this.remove()">
+                <span class="distance"><svg width="10" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>2.1 km</span>
+              </div>
+              <div class="card-body">
+                <h3>Alun-Alun Kota Malang</h3>
+                <p>Kota Malang</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
