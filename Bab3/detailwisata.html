@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pantai Balekambang - Explore Malang</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page detail-page">
+
+        <!-- Foto Utama -->
+        <section class="detail-hero">
+
+            <img src="images/balekambang.jpg" alt="Pantai Balekambang">
+
+            <a href="daftarwisata.html" class="back-btn">
+                ←
+            </a>
+
+            <button class="share-btn" onclick="sharePage()">
+                ↗
+            </button>
+
+        </section>
+
+
+        <!-- Informasi Wisata -->
+        <main class="detail-content">
+
+            <div class="detail-heading">
+
+                <h1>Pantai Balekambang</h1>
+
+                <span class="category">
+                    Pantai
+                </span>
+
+                <div class="detail-meta">
+                    <span>📍 Kabupaten Malang</span>
+                    <span>◷ 12.5 km dari lokasi Anda</span>
+                </div>
+
+                <p class="detail-rating">
+                    ⭐ <strong>4.7</strong>
+                    <span>(320 ulasan)</span>
+                </p>
+
+            </div>
+
+
+            <!-- Tab Navigasi -->
+            <div class="detail-tabs">
+
+                <button class="tab active" onclick="showTab('deskripsi', this)">
+                    Deskripsi
+                </button>
+
+                <button class="tab" onclick="showTab('lokasi', this)">
+                    Lokasi
+                </button>
+
+                <button class="tab" onclick="showTab('ulasan', this)">
+                    Ulasan
+                </button>
+
+            </div>
+
+
+            <!-- Tab Deskripsi -->
+            <section id="deskripsi" class="tab-content active">
+
+                <p class="description">
+                    Pantai Balekambang adalah salah satu pantai populer di
+                    Malang yang terkenal dengan pura di tengah laut,
+                    pasir putih yang indah, dan pemandangan sunset yang
+                    memukau.
+                </p>
+
+
+                <h3>Informasi Lainnya</h3>
+
+
+                <div class="information-list">
+
+                    <div class="information-item">
+
+                        <div class="info-icon">◷</div>
+
+                        <div>
+                            <span>Jam Buka</span>
+                            <p>06.00 - 18.00</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <div class="info-icon">♧</div>
+
+                        <div>
+                            <span>Harga Tiket</span>
+                            <p>Rp10.000 - Rp15.000</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <div class="info-icon">▤</div>
+
+                        <div>
+                            <span>Fasilitas</span>
+                            <p>Parkir, Toilet, Warung Makan</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Tab Lokasi -->
+            <section id="lokasi" class="tab-content">
+
+                <h3>Lokasi Pantai Balekambang</h3>
+
+                <p class="description">
+                    Pantai Balekambang terletak di Desa Srigonco,
+                    Kecamatan Bantur, Kabupaten Malang, Jawa Timur.
+                </p>
+
+                <p class="description">
+                    Lokasi dapat dilihat melalui Google Maps
+                    menggunakan tombol di bawah.
+                </p>
+
+            </section>
+
+
+            <!-- Tab Ulasan -->
+            <section id="ulasan" class="tab-content">
+
+                <h3>Ulasan Pengunjung</h3>
+
+                <div class="review-item">
+                    <strong>Pengunjung 1</strong>
+                    <p>⭐ 5.0</p>
+                    <p>Pemandangannya sangat indah dan cocok untuk liburan.</p>
+                </div>
+
+                <div class="review-item">
+                    <strong>Pengunjung 2</strong>
+                    <p>⭐ 4.5</p>
+                    <p>Pantai bersih dan memiliki pemandangan yang menarik.</p>
+                </div>
+
+            </section>
+
+
+            <!-- Tombol Google Maps -->
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Pantai+Balekambang+Malang"
+                target="_blank"
+                class="maps-btn">
+
+                📍 Lihat Lokasi di Maps
+
+            </a>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript Tab dan Share -->
+    <script>
+
+        function showTab(tabId, button) {
+
+            const contents = document.querySelectorAll('.tab-content');
+            const tabs = document.querySelectorAll('.tab');
+
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+
+            button.classList.add('active');
+
+        }
+
+
+        function sharePage() {
+
+            if (navigator.share) {
+
+                navigator.share({
+                    title: 'Pantai Balekambang',
+                    text: 'Yuk, kunjungi Pantai Balekambang!',
+                    url: window.location.href
+                });
+
+            } else {
+
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link berhasil disalin!');
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```
