@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Web 2026</title>
+  </head>
+  <body>
+    <center>
+      <form action="" name="myForm">
+        <label for="nama">Masukkan Nama</label> <br />
+        <input type="text" name="nama" id="nama" /> <br /><br />
+
+        <button type="button" name="simpan" onclick="hari()">Simpan</button>
+      </form>
+
+      <p id="cetak"></p>
+    </center>
+
+    <script>
+      function hari() {
+        let myForm = document.myForm;
+        let nama = myForm.nama.value;
+
+        let hariIni = new Date().getDay();
+        let hari = "";
+
+        switch (hariIni) {
+          case 0:
+            hari = "Minggu";
+            break;
+          case 1:
+            hari = "Senin";
+            break;
+          case 2:
+            hari = "Selasa";
+            break;
+          case 3:
+            hari = "Rabu";
+            break;
+          case 4:
+            hari = "Kamis";
+            break;
+          case 5:
+            hari = "Jumat";
+            break;
+          case 6:
+            hari = "Sabtu";
+            break;
+        }
+        document.getElementById(
+          "cetak"
+        ).innerHTML = `Halo ${nama} hari ini hari ${hari}`;
+      }
+    </script>
+  </body>
+</html>
