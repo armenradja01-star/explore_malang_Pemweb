@@ -1,4 +1,4 @@
-/* ===== Token ===== */
+
 :root {
   --ink: #0f172a;
   --muted: #64748b;
@@ -13,7 +13,7 @@
   --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-/* ===== Reset ===== */
+
 *, *::before, *::after { box-sizing: border-box; }
 body {
   margin: 0;
@@ -28,7 +28,6 @@ h1, h2, h3, p { margin: 0; }
 button, input { font: inherit; }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
 
-/* ===== Page ===== */
 .page {
   max-width: 1280px;
   margin: 24px auto;
@@ -39,7 +38,6 @@ button, input { font: inherit; }
   padding-bottom: 48px;
 }
 
-/* ===== Navbar ===== */
 .navbar {
   display: flex;
   align-items: center;
@@ -74,7 +72,6 @@ button, input { font: inherit; }
 .btn-location svg { color: var(--blue); }
 .btn-location:hover { background: #e3e9f5; }
 
-/* ===== Hero ===== */
 .hero {
   position: relative;
   margin: 20px 24px 0;
@@ -88,7 +85,6 @@ button, input { font: inherit; }
   color: var(--white);
   box-shadow: 0 14px 30px rgba(15, 23, 42, .2);
   overflow: hidden;
-  /* warna cadangan bila gambar belum termuat */
   background: linear-gradient(180deg, #e9a27b 0%, #7a6a74 35%, #3b4254 65%, #20263a 100%);
 }
 .hero-img {
@@ -99,7 +95,7 @@ button, input { font: inherit; }
   object-fit: cover;
   object-position: center 40%;
 }
-/* lapisan gelap agar teks tetap terbaca */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -157,7 +153,6 @@ button, input { font: inherit; }
 }
 .search button:hover { background: #1d4ed8; }
 
-/* ===== Section ===== */
 .section { padding: 0 40px; margin-top: 56px; }
 .section h2 {
   font-size: 24px;
@@ -179,7 +174,6 @@ button, input { font: inherit; }
 }
 .see-all:hover { text-decoration: underline; }
 
-/* ===== Kategori ===== */
 .categories {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -210,7 +204,7 @@ button, input { font: inherit; }
 .cat-cafe    .cat-icon { background: #fffbeb; color: #d97706; border-color: #fcefc4; }
 .cat-belanja .cat-icon { background: #fff1f2; color: #e11d48; border-color: #fddde1; }
 
-/* ===== Cards ===== */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -240,7 +234,7 @@ button, input { font: inherit; }
   height: 100%;
   object-fit: cover;
 }
-/* Warna cadangan bila foto belum dipasang */
+
 .img-balekambang { background-image: linear-gradient(160deg, #5aa7d6, #2f7fb0 55%, #d9c9a3); }
 .img-bromo       { background-image: linear-gradient(180deg, #e3a27f, #7b6575 45%, #3f4a52); }
 .img-rondo       { background-image: linear-gradient(180deg, #5f8f4f, #2f5b33 60%, #1f3f26); }
@@ -275,7 +269,7 @@ button, input { font: inherit; }
   color: var(--muted);
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 1024px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .categories { grid-template-columns: repeat(3, 1fr); row-gap: 24px; }
@@ -297,20 +291,14 @@ button, input { font: inherit; }
 }
 
 
-/* =====================================================
-   HALAMAN DETAIL WISATA (detail-page)
-   ===================================================== */
-
 .detail-page {
   max-width: 880px;
   padding-bottom: 40px;
 }
 
-/* ===== Foto utama ===== */
 .detail-hero {
   position: relative;
   height: 380px;
-  /* warna cadangan bila foto belum dipasang */
   background: linear-gradient(160deg, #5aa7d6, #2f7fb0 55%, #d9c9a3);
 }
 .detail-hero img {
@@ -352,7 +340,6 @@ button, input { font: inherit; }
 .back-btn:hover,
 .share-btn:hover { background: var(--white); transform: scale(1.06); }
 
-/* ===== Konten ===== */
 .detail-content {
   position: relative;
   z-index: 1;
@@ -362,7 +349,6 @@ button, input { font: inherit; }
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
-/* ===== Judul & info singkat ===== */
 .detail-heading h1 {
   font-size: 32px;
   font-weight: 800;
@@ -398,7 +384,6 @@ button, input { font: inherit; }
 .detail-rating strong { font-weight: 700; }
 .detail-rating span { color: var(--muted); font-size: 13.5px; }
 
-/* ===== Tab ===== */
 .detail-tabs {
   display: flex;
   gap: 6px;
@@ -448,7 +433,6 @@ button, input { font: inherit; }
 }
 .description + .description { margin-top: 12px; }
 
-/* ===== Informasi lainnya ===== */
 .information-list {
   display: grid;
   gap: 12px;
@@ -487,7 +471,6 @@ button, input { font: inherit; }
   font-weight: 600;
 }
 
-/* ===== Ulasan ===== */
 .review-item {
   padding: 16px 18px;
   margin-bottom: 12px;
@@ -499,7 +482,6 @@ button, input { font: inherit; }
 .review-item p { margin-top: 4px; font-size: 14px; line-height: 1.6; color: #475569; }
 .review-item p:first-of-type { font-size: 13px; color: #d97706; font-weight: 600; }
 
-/* ===== Tombol Maps ===== */
 .maps-btn {
   display: flex;
   align-items: center;
@@ -526,11 +508,7 @@ button, input { font: inherit; }
 }
 
 
-/* =====================================================
-   HALAMAN DAFTAR WISATA (daftarwisata.html)
-   ===================================================== */
 
-/* Navbar di halaman ini berdiri sendiri (tanpa .page), jadi diberi latar putih */
 body > .navbar {
   background: var(--white);
   position: sticky;
@@ -556,14 +534,12 @@ body > .navbar {
 }
 .location-btn:hover { background: #e3e9f5; }
 
-/* ===== Kontainer ===== */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 40px 24px 64px;
 }
 
-/* ===== Judul halaman ===== */
 .page-heading {
   display: flex;
   align-items: flex-end;
@@ -589,7 +565,6 @@ body > .navbar {
 }
 .map-link:hover { text-decoration: underline; }
 
-/* ===== Search & filter ===== */
 .filter-box {
   display: flex;
   align-items: flex-end;
@@ -652,7 +627,6 @@ body > .navbar {
 }
 .filter-group select:hover { border-color: #cbd5e1; }
 
-/* ===== Daftar wisata ===== */
 .tourism-list {
   display: grid;
   gap: 18px;
@@ -710,7 +684,6 @@ body > .navbar {
 .tourism-info .rating strong { font-weight: 700; }
 .tourism-info .rating span { color: var(--muted); font-size: 13px; }
 
-/* ===== Responsive daftar wisata ===== */
 @media (max-width: 760px) {
   .filter-box { flex-wrap: wrap; }
   .search-box { flex: 1 1 100%; }
@@ -726,10 +699,6 @@ body > .navbar {
   .tourism-info { padding: 16px 18px 20px; }
 }
 
-
-/* =====================================================
-   HALAMAN DAFTAR ADMIN (daftar-admin.html)
-   ===================================================== */
 
 .auth-body {
   min-height: 100vh;
@@ -750,7 +719,6 @@ body > .navbar {
   overflow: hidden;
 }
 
-/* ===== Sisi kiri ===== */
 .auth-visual {
   display: grid;
   place-items: center;
@@ -759,7 +727,6 @@ body > .navbar {
   text-align: center;
   position: relative;
   overflow: hidden;
-  /* warna cadangan bila gambar belum ada */
   background: linear-gradient(180deg, #1e3a8a 0%, #4a4a86 55%, #1e2a5a 100%);
 }
 .auth-img {
@@ -769,7 +736,6 @@ body > .navbar {
   height: 100%;
   object-fit: cover;
 }
-/* lapisan biru gelap di atas gambar */
 .auth-visual::after {
   content: "";
   position: absolute;
@@ -797,7 +763,6 @@ body > .navbar {
   opacity: .9;
 }
 
-/* ===== Sisi kanan ===== */
 .auth-panel {
   display: grid;
   align-items: center;
@@ -917,7 +882,6 @@ body > .navbar {
 }
 .auth-back:hover { text-decoration: underline; }
 
-/* ===== Responsive ===== */
 @media (max-width: 860px) {
   .auth-card { grid-template-columns: 1fr; min-height: 0; }
   .auth-visual { padding: 36px 24px; }
@@ -931,32 +895,14 @@ body > .navbar {
 }
 
 
-/* =====================================================
-   HALAMAN MASUK ADMIN (login.html)
-   Memakai ulang style .auth-* dari halaman Daftar Admin
-   ===================================================== */
 
-/* Gambar halaman login diatur lewat <img class="auth-img"> di HTML */
-
-/* Subjudul dua baris */
 .auth-sub { line-height: 1.7; max-width: 60ch; }
 
-/* Jarak lebih longgar antara tombol dan tautan "Daftar" */
 .auth-switch-lg { margin-top: 56px; }
 
 
-/* =====================================================
-   HALAMAN MASUK MASTER ADMIN (login-master.html)
-   Memakai ulang style halaman login admin
-   ===================================================== */
-
-/* Jarak lebih lebar antara subjudul dan formulir */
 .auth-form-lg { margin-top: 48px; }
 
-
-/* =====================================================
-   DASHBOARD ADMIN (dashboard.html)
-   ===================================================== */
 
 .dash-body {
   --navy-dark: #0b1a33;
@@ -965,7 +911,6 @@ body > .navbar {
   min-height: 100vh;
 }
 
-/* ===== Sidebar ===== */
 .sidebar {
   position: fixed;
   inset: 0 auto 0 0;
@@ -1007,7 +952,6 @@ body > .navbar {
   box-shadow: 0 6px 16px rgba(37, 99, 235, .4);
 }
 
-/* ===== Area utama ===== */
 .dash-main { margin-left: 256px; padding: 32px; }
 .dash-top {
   display: flex;
@@ -1042,7 +986,6 @@ body > .navbar {
   color: var(--white);
 }
 
-/* ===== Statistik ===== */
 .stats {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -1066,7 +1009,6 @@ body > .navbar {
 .stat-cafe   span, .stat-cafe   strong { color: #f97316; }
 .stat-belanja span, .stat-belanja strong { color: #ec4899; }
 
-/* ===== Baris & panel ===== */
 .dash-row { display: grid; gap: 24px; margin-top: 24px; }
 .row-charts { grid-template-columns: 1.45fr 1fr; }
 .row-bottom { grid-template-columns: 2.1fr 1fr; }
@@ -1079,12 +1021,10 @@ body > .navbar {
 }
 .panel h2 { font-size: 15px; font-weight: 700; letter-spacing: -.2px; }
 
-/* ===== Diagram batang ===== */
 .bar-chart { display: block; width: 100%; height: auto; margin-top: 24px; }
 .bar-values text { font-size: 12px; font-weight: 700; fill: #334155; }
 .bar-labels text { font-size: 12.5px; fill: #64748b; }
 
-/* ===== Diagram donat ===== */
 .donut-wrap {
   display: flex;
   align-items: center;
@@ -1109,7 +1049,6 @@ body > .navbar {
 .legend i { width: 9px; height: 9px; border-radius: 50%; flex: none; }
 .legend b { margin-left: auto; padding-left: 10px; font-weight: 700; color: #334155; }
 
-/* ===== Tabel ===== */
 .table-scroll { margin-top: 20px; overflow-x: auto; }
 .data-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13.5px; }
 .data-table th {
@@ -1138,7 +1077,6 @@ body > .navbar {
 .b-coban   { background: #ecfdf5; color: #0f766e; }
 .b-cafe    { background: #fff1e6; color: #ea580c; }
 
-/* ===== Peta ===== */
 .map-box {
   position: relative;
   margin-top: 16px;
@@ -1164,7 +1102,6 @@ body > .navbar {
 .map-legend li { display: flex; align-items: center; gap: 6px; }
 .map-legend i { width: 7px; height: 7px; border-radius: 50%; }
 
-/* ===== Responsive dashboard ===== */
 @media (max-width: 1180px) {
   .stats { grid-template-columns: repeat(4, 1fr); padding: 0; }
   .row-charts, .row-bottom { grid-template-columns: 1fr; }
@@ -1179,15 +1116,10 @@ body > .navbar {
 }
 
 
-/* =====================================================
-   DATA WISATA ADMIN (data-wisata.html)
-   Memakai ulang sidebar & kerangka dari dashboard
-   ===================================================== */
 
 .dash-main-plain { background: var(--white); min-height: 100vh; }
 .dash-top-end { justify-content: flex-end; }
 
-/* Tombol akun versi datar */
 .user-pill-flat {
   height: 36px;
   gap: 8px;
@@ -1207,7 +1139,6 @@ body > .navbar {
   letter-spacing: -.6px;
 }
 
-/* Kartu tabel */
 .wisata-card {
   margin-top: 24px;
   border: 1px solid #e2e8f0;
@@ -1250,7 +1181,6 @@ body > .navbar {
   box-shadow: 0 1px 4px rgba(15, 23, 42, .15);
 }
 
-/* Kategori berwarna */
 .kat { font-weight: 700; }
 .kat-pantai  { color: #2563eb; }
 .kat-gunung  { color: #16a34a; }
@@ -1259,7 +1189,6 @@ body > .navbar {
 .kat-cafe    { color: #f97316; }
 .kat-belanja { color: #ec4899; }
 
-/* Tombol aksi */
 .aksi { display: flex; justify-content: center; gap: 6px; }
 .btn-aksi {
   width: 28px;
@@ -1277,10 +1206,6 @@ body > .navbar {
 .btn-hapus { background: #e11d48; }
 
 
-/* =====================================================
-   DATA WISATA MASTER ADMIN (data-wisata-master.html)
-   Sama dengan data wisata admin, ditambah kolom ID User
-   ===================================================== */
 
 .wisata-table .col-id {
   width: 96px;
@@ -1290,10 +1215,6 @@ body > .navbar {
 .wisata-table th.col-id { text-align: left; }
 
 
-/* =====================================================
-   KATEGORI WISATA (kategori.html)
-   Memakai ulang kerangka & tabel dari Data Wisata
-   ===================================================== */
 
 .toolbar {
   display: flex;
@@ -1354,7 +1275,6 @@ body > .navbar {
 .kategori-table td { padding: 27px 12px; }
 .kategori-table .tanggal { color: #334155; }
 
-/* Titik warna + nama warna */
 .warna {
   display: inline-flex;
   align-items: center;
@@ -1373,12 +1293,6 @@ body > .navbar {
 .kosong[hidden] { display: none; }
 
 
-/* =====================================================
-   LANDING PAGE: INTERAKSI DOM + TOAST (versi 2)
-   (dipakai oleh script.js)
-   ===================================================== */
-
-/* ----- Toast: kartu putih di kanan atas, garis warna + bar hitung mundur ----- */
 .toast-wadah {
   position: fixed;
   top: 20px;
@@ -1456,7 +1370,6 @@ body > .navbar {
   .toast-wadah { top: 12px; right: 16px; left: 16px; width: auto; }
 }
 
-/* ----- Sapaan di hero ----- */
 .hero > .hero-badge { position: relative; z-index: 1; }
 .hero-badge {
   display: inline-block;
@@ -1470,7 +1383,6 @@ body > .navbar {
   font-weight: 600;
 }
 
-/* ----- Kartu: klik, hasil pencarian, kartu yang dimuat lewat JS ----- */
 .card { cursor: pointer; }
 .card.sorot {
   transform: translateY(-4px);
@@ -1479,7 +1391,7 @@ body > .navbar {
 .card-baru { animation: kartu-masuk .4s ease both; }
 @keyframes kartu-masuk { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
-/* ----- Modal detail ----- */
+
 body.modal-terbuka { overflow: hidden; }
 .modal-overlay {
   position: fixed;
@@ -1550,7 +1462,7 @@ body.modal-terbuka { overflow: hidden; }
 @keyframes fade-keluar { to { opacity: 0; } }
 @keyframes modal-naik  { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
 
-/* ----- Tombol kembali ke atas ----- */
+
 .btn-atas {
   position: fixed;
   right: 24px;

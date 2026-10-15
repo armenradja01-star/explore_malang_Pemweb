@@ -1,14 +1,3 @@
-/* =====================================================
-   Explore Malang - script.js (Landing Page)
-   - Toast            : objek Toast (sukses / error / info / peringatan)
-   - DOM #1           : sapaan sesuai jam di hero
-   - DOM #2           : "Lihat Semua" memuat / menyembunyikan kartu baru
-   - DOM #3           : klik kartu membuka modal detail
-   - DOM #4           : tombol "kembali ke atas" muncul saat scroll
-   - DOM #5           : pencarian menandai kartu yang cocok
-   ===================================================== */
-
-/* ---------- TOAST ---------- */
 const Toast = (function () {
   const svg = (isi) =>
     '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
@@ -65,7 +54,6 @@ const Toast = (function () {
       '<button type="button" class="toast__tutup" aria-label="Tutup notifikasi">&times;</button>' +
       (durasi > 0 ? '<span class="toast__bar"></span>' : '');
 
-    // Teks dimasukkan lewat textContent agar aman dari HTML tak terduga
     el.querySelector('strong').textContent = opsi.judul || '';
     el.querySelector('p').textContent = opsi.pesan || '';
 
@@ -87,7 +75,6 @@ const Toast = (function () {
 })();
 
 
-/* ---------- HALAMAN BERANDA ---------- */
 (function () {
   const hero = document.querySelector('.hero');
   const daftarKartu = document.getElementById('daftarKartu');
@@ -99,7 +86,6 @@ const Toast = (function () {
   const semuaKartu = () => Array.from(daftarKartu.querySelectorAll('.card'));
   const namaDan = (k) => k.querySelector('h3').textContent + ' ' + k.querySelector('.card-body p').textContent;
 
-  /* DOM #1: sapaan sesuai jam, disisipkan sebelum judul hero */
   const jam = new Date().getHours();
   let waktu = 'malam';
   if (jam >= 4 && jam < 11) waktu = 'pagi';
@@ -112,7 +98,6 @@ const Toast = (function () {
   hero.querySelector('h1').before(badge);
 
 
-  /* DOM #2: "Lihat Semua" membuat kartu dari data lalu menambah / menghapusnya */
   const PIN =
     '<svg width="10" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' +
     '<path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>';
@@ -166,7 +151,6 @@ const Toast = (function () {
   });
 
 
-  /* DOM #3: klik kartu membuka modal yang dibuat lewat JavaScript */
   let pemicuModal = null;
 
   function tutupModal() {
@@ -211,7 +195,6 @@ const Toast = (function () {
     overlay.querySelector('.modal__meta').textContent = lokasi + ' · ' + jarak;
     overlay.querySelector('.modal__deskripsi').textContent = kartu.dataset.deskripsi || 'Belum ada deskripsi.';
 
-    // Gambar: warna cadangan dari kartu, foto ditumpuk jika ada
     const gambar = overlay.querySelector('.modal__gambar');
     gambar.style.backgroundImage = getComputedStyle(sumber).backgroundImage;
     if (foto) {
@@ -222,7 +205,6 @@ const Toast = (function () {
       gambar.appendChild(im);
     }
 
-    // Tombol-tombol modal
     overlay.querySelector('.modal__tutup').addEventListener('click', tutupModal);
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) tutupModal();
@@ -240,7 +222,6 @@ const Toast = (function () {
     overlay.querySelector('.modal__tutup').focus();
   }
 
-  // Satu listener di kontainer: kartu baru dari JS ikut bekerja (event delegation)
   daftarKartu.addEventListener('click', (e) => {
     const kartu = e.target.closest('.card');
     if (!kartu) return;
@@ -249,7 +230,6 @@ const Toast = (function () {
   });
 
 
-  /* DOM #4: tombol kembali ke atas dibuat lewat JS, tampil setelah scroll */
   const btnAtas = document.createElement('button');
   btnAtas.type = 'button';
   btnAtas.className = 'btn-atas';
@@ -265,7 +245,6 @@ const Toast = (function () {
   btnAtas.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 
-  /* DOM #5: pencarian menandai kartu yang cocok dengan class "sorot" */
   formCari.addEventListener('submit', (e) => {
     e.preventDefault();
     semuaKartu().forEach((k) => k.classList.remove('sorot'));
