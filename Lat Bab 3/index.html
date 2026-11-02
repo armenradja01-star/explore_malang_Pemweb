@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Web 2026</title>
+  </head>
+  <body>
+    <center>
+      <form action="" name="myForm">
+        <label for="wn">Masukkan Warga Negara</label> <br />
+        <input type="text" name="wn" id="wn" /> <br /><br />
+
+        <button type="button" name="simpan" onclick="greeting()">Simpan</button>
+      </form>
+
+      <p id="cetak"></p>
+    </center>
+
+    <script>
+      function greeting() {
+        let greeting = "Halo";
+        let myForm = document.myForm;
+        let wn = myForm.wn.value;
+
+        if (wn == "Indonesia") {
+          greeting = "Selamat Pagi";
+        } else if (wn == "Inggris") {
+          greeting = "Good Morning";
+        } else if (wn == "Korea") {
+          greeting = "Annyeong Haseyo";
+        } else {
+          greeting;
+        }
+
+        document.getElementById("cetak").innerHTML = greeting;
+      }
+    </script>
+  </body>
+</html>

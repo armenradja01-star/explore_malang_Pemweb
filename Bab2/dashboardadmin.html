@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Explore Malang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dash-body">
+
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar">
+    <a href="dashboardadmin.html" class="sb-logo">
+      <svg width="30" height="26" viewBox="0 0 34 30" fill="none" aria-hidden="true">
+        <path d="M2 28 L2 8 L12 20 L19 4 L32 28" stroke="#3b82f6" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M2 8 L12 20 L19 4" stroke="#fff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span>Explore Malang</span>
+    </a>
+
+    <nav class="sb-nav" aria-label="Menu admin">
+      <a href="dashboardadmin.html" class="sb-link active" aria-current="page">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        Dasbord
+      </a>
+      <a href="datawisata.html" class="sb-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></svg>
+        Data Wisata
+      </a>
+      <a href="loginadmin.html" class="sb-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"/><path d="M16 8l4 4-4 4M20 12H9"/></svg>
+        Logout
+      </a>
+    </nav>
+  </aside>
+
+  <!-- ===== Konten utama ===== -->
+  <div class="dash-main">
+
+    <header class="dash-top">
+      <h1>Dashboard</h1>
+      <button class="user-pill" type="button" aria-label="Menu akun admin">
+        <span class="avatar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4.5"/><path d="M3.500 21c.8-4.500 4.200-7 8.500-7s7.700 2.500 8.500 7z"/></svg>
+        </span>
+        admin
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </header>
+
+    <!-- Statistik -->
+    <section class="stats" aria-label="Ringkasan jumlah wisata">
+      <div class="stat stat-total"><span>Total Wisata</span><strong>86</strong></div>
+      <div class="stat stat-pantai"><span>Pantai</span><strong>18</strong></div>
+      <div class="stat stat-gunung"><span>Gunung</span><strong>12</strong></div>
+      <div class="stat stat-coban"><span>Coban</span><strong>11</strong></div>
+      <div class="stat stat-alam"><span>Alam</span><strong>15</strong></div>
+      <div class="stat stat-cafe"><span>Cafe</span><strong>16</strong></div>
+      <div class="stat stat-belanja"><span>Belanja</span><strong>14</strong></div>
+    </section>
+
+    <!-- Grafik -->
+    <section class="dash-row row-charts">
+
+      <article class="panel">
+        <h2>Jumlah Wisata per Kategori</h2>
+        <svg class="bar-chart" viewBox="0 0 470 235" role="img" aria-label="Diagram batang jumlah wisata per kategori">
+          <g stroke="#e8ecf3" stroke-width="1">
+            <line x1="20" x2="450" y1="175" y2="175"/><line x1="20" x2="450" y1="135" y2="135"/>
+            <line x1="20" x2="450" y1="95" y2="95"/><line x1="20" x2="450" y1="55" y2="55"/><line x1="20" x2="450" y1="15" y2="15"/>
+          </g>
+          <g>
+            <rect x="32"  y="31" width="28" height="144" rx="3" fill="#2563eb"/>
+            <rect x="105" y="79" width="28" height="96"  rx="3" fill="#3b82f6"/>
+            <rect x="178" y="55" width="28" height="120" rx="3" fill="#0d9488"/>
+            <rect x="251" y="87" width="28" height="88"  rx="3" fill="#14b8a6"/>
+            <rect x="324" y="47" width="28" height="128" rx="3" fill="#f43f5e"/>
+            <rect x="397" y="63" width="28" height="112" rx="3" fill="#a855f7"/>
+          </g>
+          <g class="bar-values" text-anchor="middle">
+            <text x="46"  y="23">18</text><text x="119" y="71">12</text><text x="192" y="47">15</text>
+            <text x="265" y="79">11</text><text x="338" y="39">16</text><text x="411" y="55">14</text>
+          </g>
+          <g class="bar-labels" text-anchor="middle">
+            <text x="46"  y="206">Pantai</text><text x="119" y="206">Gunung</text><text x="192" y="206">Alam</text>
+            <text x="265" y="206">Coban</text><text x="338" y="206">Cafe</text><text x="411" y="206">Belanja</text>
+          </g>
+        </svg>
+      </article>
+
+      <article class="panel">
+        <h2>Distribusi Wisata</h2>
+        <div class="donut-wrap">
+          <div class="donut">
+            <svg viewBox="0 0 160 160" role="img" aria-label="Diagram donat distribusi wisata">
+              <g transform="rotate(-90 80 80)" fill="none" stroke-width="26">
+                <circle cx="80" cy="80" r="60" pathLength="100" stroke="#0ea5e9" stroke-dasharray="20.9 79.1" stroke-dashoffset="0"/>
+                <circle cx="80" cy="80" r="60" pathLength="100" stroke="#2563eb" stroke-dasharray="14 86"     stroke-dashoffset="-20.9"/>
+                <circle cx="80" cy="80" r="60" pathLength="100" stroke="#f59e0b" stroke-dasharray="17.4 82.6" stroke-dashoffset="-34.9"/>
+                <circle cx="80" cy="80" r="60" pathLength="100" stroke="#6366f1" stroke-dasharray="12.8 87.2" stroke-dashoffset="-52.3"/>
+                <circle cx="80" cy="80" r="60" pathLength="100" stroke="#ec4899" stroke-dasharray="18.6 81.4" stroke-dashoffset="-65.1"/>
+                <circle cx="80" cy="80" r="60" pathLength="100" stroke="#8b5cf6" stroke-dasharray="16.3 83.7" stroke-dashoffset="-83.7"/>
+              </g>
+            </svg>
+            <div class="donut-center"><strong>86</strong><span>Total Wisata</span></div>
+          </div>
+          <ul class="legend">
+            <li><i style="background:#0ea5e9"></i>Pantai<b>20.9%</b></li>
+            <li><i style="background:#2563eb"></i>Gunung<b>14.0%</b></li>
+            <li><i style="background:#f59e0b"></i>Alam<b>17.4%</b></li>
+            <li><i style="background:#6366f1"></i>Coban<b>12.8%</b></li>
+            <li><i style="background:#ec4899"></i>Cafe<b>18.6%</b></li>
+            <li><i style="background:#8b5cf6"></i>Belanja<b>16.3%</b></li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Tabel & peta -->
+    <section class="dash-row row-bottom">
+
+      <article class="panel">
+        <h2>Wisata Terbaru</h2>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr><th>No</th><th>Nama</th><th>Kategori</th><th>Tanggal Ditambahkan</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Taman Selecta</td><td><span class="badge b-alam">Alam</span></td><td class="date">22 Sep 2025</td></tr>
+              <tr><td>2</td><td>Museum Brawijaya</td><td><span class="badge b-budaya">Budaya</span></td><td class="date">20 Sep 2025</td></tr>
+              <tr><td>3</td><td>BNS (Batu Night Spectacular)</td><td><span class="badge b-belanja">Belanja</span></td><td class="date">18 Sep 2025</td></tr>
+              <tr><td>4</td><td>Coban Rondo</td><td><span class="badge b-coban">Coban</span></td><td class="date">15 Sep 2025</td></tr>
+              <tr><td>5</td><td>Cafe Sawah Pujon</td><td><span class="badge b-cafe">Cafe</span></td><td class="date">12 Sep 2025</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Peta Sebaran Wisata</h2>
+        <!-- Placeholder peta. Ganti dengan Leaflet / Google Maps bila sudah ada data koordinat -->
+        <div class="map-box" id="peta">
+          <svg viewBox="0 0 260 225" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="260" height="225" fill="#e4f0dc"/>
+            <path d="M0 40 C60 20 90 70 150 55 S230 30 260 60 V0 H0Z" fill="#d3e8c8"/>
+            <path d="M0 150 C50 120 110 170 170 140 S240 150 260 130 V225 H0Z" fill="#cfe5c3"/>
+            <path d="M0 200 C60 185 120 205 180 190 S240 195 260 185 V225 H0Z" fill="#7dd3fc"/>
+            <path d="M120 0 L108 120 L98 200" stroke="#fde68a" stroke-width="3" fill="none"/>
+            <path d="M70 108 L180 100" stroke="#fff" stroke-width="2" fill="none"/>
+            <g fill="#64748b" font-size="7" font-family="Plus Jakarta Sans, sans-serif">
+              <text x="62" y="68">Batu</text><text x="125" y="118" font-size="9" font-weight="700" fill="#334155">MALANG</text>
+              <text x="70" y="140">Wagir</text><text x="150" y="100">Tumpang</text>
+            </g>
+            <g stroke="#fff" stroke-width="1.500">
+              <circle cx="90" cy="64" r="4" fill="#a78bfa"/><circle cx="126" cy="105" r="4" fill="#ef4444"/>
+              <circle cx="110" cy="130" r="4" fill="#2563eb"/><circle cx="138" cy="146" r="4" fill="#ef4444"/>
+              <circle cx="160" cy="152" r="4" fill="#f97316"/>
+            </g>
+            <text x="12" y="218" font-size="6" font-weight="700" fill="#0369a1" font-family="Plus Jakarta Sans, sans-serif">SAMUDERA INDONESIA</text>
+          </svg>
+          <ul class="map-legend">
+            <li><i style="background:#0ea5e9"></i>Pantai</li>
+            <li><i style="background:#ef4444"></i>Gunung</li>
+            <li><i style="background:#22c55e"></i>Alam</li>
+            <li><i style="background:#0f766e"></i>Coban</li>
+            <li><i style="background:#f97316"></i>Cafe</li>
+            <li><i style="background:#ec4899"></i>Belanja</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+  </div>
+
+</body>
+</html>

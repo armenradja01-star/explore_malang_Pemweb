@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk Admin - Explore Malang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+  <main class="auth-card">
+
+    <!-- Sisi kiri: gambar & branding -->
+    <section class="auth-visual auth-visual-login" aria-label="Explore Malang">
+      <img class="auth-img" src="../Bab2/images/bromo.jpeg" alt="" onerror="this.remove()">
+      <div class="auth-brand">
+        <svg width="80" height="56" viewBox="0 0 80 56" fill="none" aria-hidden="true">
+          <path d="M2 44 L26 8 L38 24 L48 12 L78 44 Z" fill="#fff"/>
+          <path d="M26 8 L31 15 L26 13 L21 16 Z M48 12 L53 19 L48 17 L44 20 Z" fill="#cbd5e1"/>
+          <path d="M8 52 Q40 58 72 52" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <h2>Explore Malang</h2>
+        <p>Portal Resmi Wisata &amp; Destinasi</p>
+      </div>
+    </section>
+
+    <!-- Sisi kanan: formulir -->
+    <section class="auth-panel">
+      <div class="auth-form-wrap">
+        <h1>Masuk Admin</h1>
+        <p class="auth-sub">
+          Silakan login untuk mengakses panel admin<br>
+          Daftarkan tempat wisata daerahmu dan buat wisata tersebut lebih dikenal orang!
+        </p>
+
+        <form class="auth-form" id="formLogin" novalidate>
+
+          <div class="field">
+            <svg class="field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+            <input type="text" name="username" placeholder="Username" aria-label="Username" autocomplete="username" required>
+          </div>
+
+          <div class="field">
+            <svg class="field-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm2 0h6V8a3 3 0 0 0-6 0z"/></svg>
+            <input type="password" name="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required>
+            <button type="button" class="toggle-pass" aria-label="Tampilkan password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+
+          <p class="auth-error" id="pesanError" role="alert" hidden></p>
+
+          <button type="submit" class="btn-primary">Masuk</button>
+        </form>
+
+        <p class="auth-switch auth-switch-lg">Belum punya akun? <a href="daftar-admin.html">Daftar</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Tampil/sembunyikan password
+    document.querySelectorAll('.toggle-pass').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var input = btn.parentElement.querySelector('input');
+        var tampil = input.type === 'password';
+        input.type = tampil ? 'text' : 'password';
+        btn.setAttribute('aria-label', tampil ? 'Sembunyikan password' : 'Tampilkan password');
+      });
+    });
+
+    // Validasi sederhana sebelum kirim
+    document.getElementById('formLogin').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = e.target, err = document.getElementById('pesanError');
+      var pesan = (!f.username.value.trim() || !f.password.value) ? 'Username dan password wajib diisi.' : '';
+      err.textContent = pesan;
+      err.hidden = !pesan;
+      if (!pesan) {
+        // TODO: kirim ke server, lalu arahkan ke panel admin
+        alert('Login berhasil!');
+      }
+    });
+  </script>
+</body>
+</html>

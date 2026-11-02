@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p id="demo"></p>
+	<script>
+		let person = {name:"Radja", age:"21", gender:"male"};
+
+		let text = "";
+		Object.keys(person).forEach(function(key) {
+			text += key + ": " + person[key] + "<br>";
+		});
+
+		document.getElementById("demo").innerHTML = text;
+	</script>
+</body>
+</html>
